@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "main": "server.js",
   "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
