@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT; // Choose your desired port
 
 // Serve static files from the 'dist' directory
-app.use(express.static(path.join(__dirname, 'dist', 'angular-express-azure', 'browser')));
+// app.use(express.static(path.join(__dirname, 'dist', 'angular-express-azure', 'browser')));
 
 // Handle all routes by serving the index.html file
 app.get('*', (req, res) => {
