@@ -68,6 +68,6 @@ function useCSP(content) {
   return {
     // cspHeader: `${defaultSrc}; ${connectSrc}; ${styleSrc}; ${scriptSrc}; ${imgSrc}; ${frameSrc}; ${frameAncestor};`,
     cspHeader: `default-src 'self' 'nonce-${nonce}'`,
-    cspContent: content.replace('NODE_CSP_NONCE', nonce),
+    cspContent: content.replaceAll('NODE_CSP_NONCE', nonce),
   }
 }
