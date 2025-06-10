@@ -1,5 +1,7 @@
 const express = require('express');
+const crypto = require('crypto');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const port = process.env.PORT; // Choose your desired port
 
@@ -45,7 +47,7 @@ app.listen(port, () => {
 });
 
 function useCSP(content) {
-  const nonce = uuidv4().replace(/\-/g, '');
+  const nonce = crypto.randomUUID();
 
     // TODO: figure out how to extract from environment
   const gatewayApiEndpoint = 'https://dev-gateway-apim.azure-api.net';
