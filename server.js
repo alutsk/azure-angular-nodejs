@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
 
 
   // path to file
-  const filePath = path.resolve(__dirname, 'dist', 'browser', 'index.html');
+  const filePath = path.resolve(__dirname, 'dist', 'angular-express-azure', 'browser', 'index.html');
 
   // read the file
   fs.readFile(filePath, 'utf8', function (err, data) {
